@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stationery Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ichu's Stationary</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <h1>About Us</h1>
+        <p>Welcome to Ichu Stationary, your one-stop destination for high-quality stationery essentials. At Ichu Stationary, we pride ourselves on offering a wide range of products that cater to all your writing, drawing, and organizational needs. Whether you're a student, artist, or professional, our curated selection includes everything from notebooks and pens to art supplies and desk organizers. With a commitment to quality and customer satisfaction, Ichu Stationary aims to inspire creativity and productivity in every aspect of your life. Discover the joy of stationery shopping with us, where every item is chosen with care to enhance your daily routines and creative endeavors.</p>
+    </section>
+    <section id="shop">
+        <h1>Shop</h1>
+        <div class="cards"> 
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/813hfEpmb3L._AC_UF1000,1000_QL80_.jpg" alt="Item 1">
+                <h2>Mini School Kit</h2>
+                <p>Compact and colorful notebooks, smooth-writing pens, stylish pencil case, bright sticky notes, and vibrant highlighters.</p>
+                <p><h3>Price: ₹299</h3></p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/61qLGy1SOYL._AC_UF1000,1000_QL80_.jpg" alt="Item 2">
+                <h2>To Do List Planner</h2>
+                <p>Efficient to-do list planner for organized daily tasks and goals.</p>
+                <p><h3>Price: ₹249</h3></p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/kn4xhu80/art-set/i/5/q/smart-kit-with-12-exited-unique-stationery-items-doms-original-imagfwyzqnc5qtvc.jpeg?q=20&crop=false" alt="Item 3">
+                <h2>Doms Mini Kit</h2>
+                <p>Convenient DOMS mini kit with essential stationery for daily use.</p>
+                <p><h3>Price: ₹499</h3></p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://funblast.in/cdn/shop/files/81Ve5lgDwbL._SL1500.jpg?v=1693036323" alt="Item 4">
+                <h2>Ichu Foundation pen set</h2>
+                <p>Complete foundation pen set for precise and artistic drawing and writing tasks.</p>
+                <p><h3>Price: ₹69</h3></p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l0r1j0w0/sketch-pen/j/j/p/washable-water-color-pen-set-of-48-pieces-for-coloring-painting-original-imagcgz28m5ygcgq.jpeg?q=90&crop=false" alt="Item 5">
+                <h2>Ichu Sketch pen</h2>
+                <p>Versatile sketch pen set for vibrant and detailed artistic creations.</p>
+                <p><h3>Price: ₹39</h3></p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us.....</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+    <footer>
+        <p>&copy; Ichu's Stationary</p>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            document.getElementById('formMessage').innerText = `Thank you, ${name}! Your message has been sent.`;
+            
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>
